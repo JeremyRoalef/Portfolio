@@ -1,0 +1,130 @@
+/*General Styling*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	width: 100%; /*Remove horizontal margins from parent element*/
+	height: 100%; /*Remove vertical margins from parent element*/
+	font-size: clamp(18px, 3vh, 32px);
+	display: flex; /*Structures the content to fit in a flexbox*/
+	flex-direction: column; /*Structures the flexbox's content vertically*/
+	
+	/*Color*/
+	background-color: #fff1f1;
+}
+header, footer{
+	min-height: 10%;	
+	width: 100%;
+	background-color: #5e5e5e;
+	color: white;
+}
+
+footer{
+    min-height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0% 5%;
+}
+
+.footer-content h3{
+    text-align: center;
+}
+
+main{
+	flex: 1; /*Extends the content to fit the size of the screen if the content is too little*/
+}
+nav{
+	display: flex;
+	justify-content: horizontal;
+	align-items: center;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+a:link{
+	color: rgb(110, 173, 194);
+}
+a:visited{
+	color: lightblue;
+}
+a:hover{
+	color: rgb(201, 234, 246);
+}
+a:active{
+	color: rgb(126, 185, 205);
+}
+
+.portfolio-links{
+    margin-left: auto;
+	padding-right: 3%;
+	color: white;
+}
+
+h1{
+	color: #03009c;
+	font-size: clamp(18px, 3.5vw, 128px);
+}
+
+/*Home Page Styling*/
+.intro-header{
+    /*Width Settings*/
+    min-width: 50%;
+    max-width: 70%;
+
+    /*Alignment to other elements*/
+    margin: 1%;
+
+    /*Internal element alignment*/
+    display: flex;
+    justify-content: center;
+    border-radius: clamp(3px, 3.5vw, 15px);
+    background-color:lightblue;
+    align-self: center;
+}
+
+.content-section{
+    background-color: lightgray;
+    margin: 1% 5%;
+    padding: 1%;
+    display: flex;
+    justify-content: horizontal;
+    align-items: flex-start;
+    border-radius: clamp(3px, 3.5vw, 15px);
+
+    height: auto;
+}
+.content-section img{
+    width: 45%;
+    height: auto;
+    border-radius: clamp(3px, 3.5vw, 15px);
+}
+.vertical-bar{
+    border-left: 2px solid black;
+    margin: 1%;
+}
+
+.content{
+    flex: 1;
+}
+
+.content h1{
+    font-size: clamp(32px, 3.5vw, 128px);
+    display: flex;
+    justify-content: center;
+}
+
+.content hr{
+    border-top: 2px solid black;
+    margin: 1% 10%;
+}
+.content p{
+    margin: 2% 0%;
+    font-size: clamp(1px, 1.55vw, 64px);
+}
