@@ -15,13 +15,14 @@ body{
 	flex-direction: column; /*Structures the flexbox's content vertically*/
 	
 	/*Color*/
-	background-color: #fff1f1;
+	background-color: #d5ba98;
+    font-family: 'Inter', sans-serif;
 }
 header, footer{
 	min-height: 10%;	
 	width: 100%;
-	background-color: #5e5e5e;
-	color: white;
+	background-color: #063a26;
+	color: #7aac69;
 }
 
 footer{
@@ -31,7 +32,15 @@ footer{
     padding: 0% 5%;
 }
 
-.footer-content h3{
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #a3da91;
+}
+
+.center-text{
     text-align: center;
 }
 
@@ -49,16 +58,16 @@ a{
 	font-weight: bold;
 }
 a:link{
-	color: rgb(110, 173, 194);
+	color: #a3da91;
 }
 a:visited{
-	color: lightblue;
+	color: #b3e6a2;
 }
 a:hover{
-	color: rgb(201, 234, 246);
+	color: #8ac776;
 }
 a:active{
-	color: rgb(126, 185, 205);
+	color: #67a951;
 }
 
 .portfolio-links{
@@ -68,8 +77,11 @@ a:active{
 }
 
 h1{
-	color: #03009c;
 	font-size: clamp(18px, 3.5vw, 128px);
+}
+
+h1, h2, h3, h4{
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*Home Page Styling*/
@@ -85,12 +97,13 @@ h1{
     display: flex;
     justify-content: center;
     border-radius: clamp(3px, 3.5vw, 15px);
-    background-color:lightblue;
+    background-color: #a39264;
     align-self: center;
+    color: #f0ebd7
 }
 
 .content-section{
-    background-color: lightgray;
+    background-color: #f0ebd7;
     margin: 1% 5%;
     padding: 1%;
     display: flex;
@@ -111,7 +124,8 @@ h1{
 }
 
 .content{
-    flex: 1;
+    flex: 0.95;
+    color: #605434
 }
 
 .content h1{
@@ -126,5 +140,12 @@ h1{
 }
 .content p{
     margin: 2% 0%;
-    font-size: clamp(1px, 1.55vw, 64px);
+    font-size: clamp(1px, 1.45vw, 64px);
+}
+.content ul{
+    width: 50%;
+    margin: 0 auto;
+    column-count: 2;
+    column-gap: 30%;
+    font-size: clamp(1px, 1.25vw, 64px);
 }
