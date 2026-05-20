@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jeremy Roalef Portfolio - Work Experience</title>
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <!--Font styling-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class = "portfolio-links">
+                    <a href="../index.html">Home</a> |
+                    <a href="">Work Experience</a> |
+                    <a href="../CollegeProjects/index.html">College Projects</a> |
+                    <a href="../Hobbies/index.html">Hobbies</a>
+                </div>
+            </nav>
+        </header>
+
+        <h1 class = "intro-header">Work Experience</h1>
+
+        <div class = "button-container">
+            <button class = "work-button" onclick="openWorkContainer('')">Clear</button>
+            <button class = "work-button" onclick="openWorkContainer('TutoringCenter')">SUNY Morrisville Tutoring Center</button>
+            <button class = "work-button" onclick="openWorkContainer('MorrisvilleInternship')">SUNY Morrisville Game Programming Internship</button>
+        </div>
+
+        <!--WORK CONTENT-->
+
+        <div class = "work-container" id="TutoringCenter">
+            <div class = "work-metadata">
+                <h3>SUNY Morrisville Peer Tutoring</h3>
+                <p>Spring 2024-Spring 2025, Fall 2026</p>
+            </div>
+            
+        </div>
+        <div class = "work-container" id="MorrisvilleInternship">
+            <h1>Internship!</h1>
+        </div>
+
+        <!--END OF WORK CONTENT-->
+        <footer>
+            <div class="vertical-bar"></div>
+            <div>
+                <h3 class = "center-text">Accounts</h3>
+                <hr>
+                <div class = "footer-content">
+                    <a href = "https://github.com/JeremyRoalef">GitHub</a>
+                </div>
+
+            </div>
+            <div class = "vertical-bar"></div>
+            <div>
+                <h3 class = "center-text">Contact</h3>
+                <hr>
+                <div class = "footer-content">
+                    <a href="mailto:jroalef021@gmail.com">jroalef021@gmail.com</a>
+                    <p>(607) 373-7049</p>
+                </div>
+                
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script>
+    function openWorkContainer(workID){
+
+        // Hide all work containers
+        document.querySelectorAll(".work-container")
+            .forEach(c => c.classList.remove("active"));
+
+        // If a specific container was requested, show it
+        if(workID !== ""){
+            document.getElementById(workID)
+                .classList.add("active");
+        }
+    }
+</script>

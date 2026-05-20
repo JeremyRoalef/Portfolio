@@ -47,7 +47,7 @@ footer{
 main{
 	flex: 1; /*Extends the content to fit the size of the screen if the content is too little*/
 }
-nav{
+nav{height: 1px;
 	display: flex;
 	justify-content: horizontal;
 	align-items: center;
@@ -148,4 +148,63 @@ h1, h2, h3, h4{
     column-count: 2;
     column-gap: 30%;
     font-size: clamp(1px, 1.25vw, 64px);
+}
+
+/*Work Experience Page*/
+.button-container{
+    display: flex;
+    flex-direction: Horizontal;
+    justify-content: center;
+    column-gap: 1%;
+    margin: 1% 0;
+}
+
+.work-button{
+	background-color: #0B4D04;
+	color: white;
+    width: auto;
+	height: clamp(18px, 4vh, 512px);
+	font-size: clamp(5px, 1.3vw, 32px);
+	border-radius: 6px;
+    padding: 0% 1%;
+    text-align: center;
+}
+.work-button:hover{
+	background-color: #0F7007;
+}
+.work-container{
+    margin: 1% 4%;
+    display: none;
+    flex-direction: column;
+    background-color: #f0ebd7;
+    color: #605434;
+    gap: 1%;
+    border-radius: 12px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+.work-container.active{
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+.work-metadata h3{
+    font-size: clamp(5px, 2vw, 64px);
+}
+.work-metadata{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 0%;
 }
