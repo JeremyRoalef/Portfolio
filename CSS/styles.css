@@ -6,6 +6,7 @@
 }
 html{
 	height: 100%;
+    margin: 0;
 }
 body{
 	width: 100%; /*Remove horizontal margins from parent element*/
@@ -13,11 +14,14 @@ body{
 	font-size: clamp(18px, 3vh, 32px);
 	display: flex; /*Structures the content to fit in a flexbox*/
 	flex-direction: column; /*Structures the flexbox's content vertically*/
-	
+    margin: 0;
+    min-height: 100vh;
+    
 	/*Color*/
 	background-color: #d5ba98;
     font-family: 'Inter', sans-serif;
 }
+
 header, footer{
 	min-height: 10%;	
 	width: 100%;
@@ -30,6 +34,7 @@ footer{
     display: flex;
     justify-content: flex-end;
     padding: 0% 5%;
+    margin: 0;
 }
 
 .footer-content{
@@ -110,7 +115,7 @@ h1, h2, h3, h4{
     justify-content: horizontal;
     align-items: flex-start;
     border-radius: clamp(3px, 3.5vw, 15px);
-
+    flex: 1;
     height: auto;
 }
 .content-section img{
@@ -142,9 +147,19 @@ h1, h2, h3, h4{
     margin: 2% 0%;
     font-size: clamp(1px, 1.45vw, 64px);
 }
+
 .content ul{
-    width: 50%;
+    margin: 0 6%;
+    font-size: clamp(1px, 1.45vw, 64px);
+}
+
+.content li{
+    margin-bottom: 1%;
+}
+
+.list-double-column{
     margin: 0 auto;
+    width: 50%;
     column-count: 2;
     column-gap: 30%;
     font-size: clamp(1px, 1.25vw, 64px);
@@ -207,4 +222,15 @@ h1, h2, h3, h4{
     flex-direction: column;
     align-items: center;
     margin: 1% 0%;
+}
+.work-content{
+    background-color: #f0ebd7;
+    margin: 1% 5%;
+    padding: 1%;
+    display: flex;
+    justify-content: horizontal;
+    align-items: flex-start;
+    border-radius: clamp(3px, 3.5vw, 15px);
+    flex: 1;
+    height: auto;
 }
