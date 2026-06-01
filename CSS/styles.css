@@ -29,6 +29,9 @@ header, footer{
 	color: #7aac69;
 }
 
+p{
+    font-size: clamp(1px, 1.45vw, 64px);
+}
 footer{
     min-height: 15%;
     display: flex;
@@ -43,6 +46,9 @@ footer{
     align-items: center;
     flex-direction: column;
     color: #a3da91;
+}
+.footer-content a, p{
+    font-size: clamp(1px, 1.5vw, 64px);
 }
 
 .center-text{
@@ -122,6 +128,7 @@ h1, h2, h3, h4{
     width: 45%;
     height: auto;
     border-radius: clamp(3px, 3.5vw, 15px);
+    border: 2px solid black;
 }
 .vertical-bar{
     border-left: 2px solid black;
@@ -137,6 +144,12 @@ h1, h2, h3, h4{
     font-size: clamp(32px, 3.5vw, 128px);
     display: flex;
     justify-content: center;
+}
+.content h2{
+    font-size: clamp(32px, 2.5vw, 128px);
+}
+.content h4{
+    font-size: clamp(5px, 1.55vw, 64px);
 }
 
 .content hr{
@@ -214,6 +227,9 @@ h1, h2, h3, h4{
 
     pointer-events: auto;
 }
+.work-container h3{
+    text-align: center;
+}
 .work-metadata h3{
     font-size: clamp(5px, 2vw, 64px);
 }
@@ -233,4 +249,26 @@ h1, h2, h3, h4{
     border-radius: clamp(3px, 3.5vw, 15px);
     flex: 1;
     height: auto;
+}
+.technology-container{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    flex: 1;
+}
+.technology-group ul{
+    padding-left: 3.5%;
+}
+.technology-group h5{
+    font-size: clamp(5px, 1.3vw, 64px);
+}
+.internship-presentation{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.internship-presentation img{
+    height: auto;
+    width: 70%;
+    border: 5px solid black;
 }
