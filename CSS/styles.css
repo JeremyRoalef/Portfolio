@@ -272,3 +272,63 @@ h1, h2, h3, h4{
     width: 70%;
     border: 5px solid black;
 }
+
+/*Projects Page*/
+.project-container{
+    margin: 1% 4%;
+    padding: 1%;
+    display: none;
+    background-color: #f0ebd7;
+    color: #605434;
+    gap: 1%;
+    border-radius: 12px;
+
+    /* Grid */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;  
+}
+
+.project-container.active {
+    display: grid;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+.project-content{
+    background-color: white;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.project-metadata h3{
+    font-size: clamp(18px, 2vw, 128px);
+}
+.project-metadata p{
+    font-size: clamp(18px, 1.3vw, 128px);
+}
+.project-deliverables a{
+    font-size: clamp(18px, 1.5vw, 128px);
+}
+.project-image{
+    padding: 2% 0%;
+}
+.project-image img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
